@@ -1,0 +1,53 @@
+let f := openReader "./src/ru/usu/cs/fun/lang/in.txt" "Windows-1251";
+//>openReader ./src/ru/usu/cs/fun/lang/in.txt Windows-1251
+readInt f;
+//>12334
+readInt f;
+//>234
+isEnd f;
+//>false
+readInt f;
+//>324
+isEnd f;
+//>true
+
+let f2 := openReader "./src/ru/usu/cs/fun/lang/in2.txt" "Windows-1251";
+//>openReader ./src/ru/usu/cs/fun/lang/in2.txt Windows-1251
+
+readInt f2;
+//>123
+isEnd f2;
+//>false
+
+readInt f2;
+//>1243
+readLine f2;
+//>
+readLine f2;
+//>ыва
+readLine f2;
+//>asdf
+isEnd f2;
+//>true
+
+let f3 := openString "1234\nasd\n5678\nqwert\tqwe";
+readInt f3;
+//>1234
+readLine f3;
+//>
+readLine f3;
+//>asd
+readInt f3;
+//>5678
+readLine f3;
+//>
+readLine f3;
+//>qwert	qwe
+isEnd f3;
+//>true
+
+let f4 := console;
+let t1:= readInt f4;
+345;
+t1;
+//>345
